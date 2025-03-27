@@ -40,6 +40,7 @@ class CancelButton extends StatelessWidget {
               style: TextStyle(
                 color: Color.fromARGB(255, 19, 11, 26),
                 fontSize: 14,
+                fontFamily: "Pretendard",
                 fontWeight: FontWeight.w500,
               ),
             ),
