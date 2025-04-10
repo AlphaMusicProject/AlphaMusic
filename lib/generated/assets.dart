@@ -2,14 +2,16 @@
 class Assets {
   Assets._();
 
-  static const String assetsImgFailEmoji = 'assets/img/fail_emoji.svg';
   static const String fontsPretendardBold = 'assets/fonts/Pretendard-Bold.ttf';
-  static const String fontsPretendardMedium = 'assets/fonts/Pretendard-Medium.ttf';
-  static const String fontsPretendardRegular = 'assets/fonts/Pretendard-Regular.ttf';
-  static const String fontsPretendardSemiBold = 'assets/fonts/Pretendard-SemiBold.ttf';
+  static const String fontsPretendardMedium =
+      'assets/fonts/Pretendard-Medium.ttf';
+  static const String fontsPretendardRegular =
+      'assets/fonts/Pretendard-Regular.ttf';
+  static const String fontsPretendardSemiBold =
+      'assets/fonts/Pretendard-SemiBold.ttf';
   static const String imgFailEmoji = 'assets/img/fail_emoji.png';
-  static const String imgHomeEmoji = 'assets/img/home_emoji.svg';
-  static const String imgListeningEmoji = 'assets/img/listening_emoji.svg';
-  static const String imgProfileEmoji = 'assets/img/profile_emoji.svg';
-
+  static const String imgListeningEmoji = 'assets/img/listening_emoji.png';
+  static const String imgPlayButton = 'assets/img/play_button.png';
+  static const String imgSampleMusicImage = 'assets/img/sample_music_image.png';
+  static const String imgStopButton = 'assets/img/stop_button.png';
 }
