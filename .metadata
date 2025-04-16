@@ -21,6 +21,7 @@ migration:
     - platform: ios
       create_revision: 68415ad1d920f6fe5ec284f5c2febf7c4dd5b0b3
       base_revision: 68415ad1d920f6fe5ec284f5c2febf7c4dd5b0b3
+<<<<<<< HEAD
     - platform: linux
       create_revision: 68415ad1d920f6fe5ec284f5c2febf7c4dd5b0b3
       base_revision: 68415ad1d920f6fe5ec284f5c2febf7c4dd5b0b3
@@ -33,6 +34,8 @@ migration:
     - platform: windows
       create_revision: 68415ad1d920f6fe5ec284f5c2febf7c4dd5b0b3
       base_revision: 68415ad1d920f6fe5ec284f5c2febf7c4dd5b0b3
+=======
+>>>>>>> 513ce61ddd76e84016033bda04ac0bfbea93fba9
 
   # User provided section
 
