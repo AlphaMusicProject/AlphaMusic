@@ -1,10 +1,10 @@
-import 'package:alphamusic/feature/fail/components/fail_texts.dart';
+import 'package:alphamusic/feature/listening/components/listening_texts.dart';
+import 'package:alphamusic/feature/listening/components/listening_wave.dart';
 import 'package:alphamusic/shared/components/cancel_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class FailScreen extends StatelessWidget {
-  const FailScreen({super.key});
+class ListeningScreen extends StatelessWidget {
+  const ListeningScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +25,9 @@ class FailScreen extends StatelessWidget {
               SizedBox(width: 20),
             ],
           ),
-          FailTexts(),
-          SizedBox(height: 150),
-          Image.asset("assets/img/fail_emoji.png"),
+          ListeningTexts(),
+          SizedBox(height: 100),
+          ListeningWave(),
         ],
       ),
     );
