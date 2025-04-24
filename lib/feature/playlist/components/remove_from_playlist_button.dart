@@ -54,7 +54,7 @@ class _RemoveFromPlaylistButtonState extends State<RemoveFromPlaylistButton> {
               children: [
                 Icon(
                   _isAdded
-                      ? CupertinoIcons.delete_forever
+                      ? CupertinoIcons.trash
                       : CupertinoIcons.music_note_list,
                   color: Colors.white,
                   size: 25,
