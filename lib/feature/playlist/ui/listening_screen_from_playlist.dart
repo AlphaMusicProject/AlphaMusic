@@ -1,5 +1,5 @@
 import 'package:alphamusic/feature/playlist//components/remove_from_playlist_button.dart';
-import 'package:alphamusic/feature/music_result/components/result_texts.dart';
+import 'package:alphamusic/feature/playlist/components/result_texts.dart';
 import 'package:alphamusic/shared/components/play_button.dart';
 import 'package:flutter/material.dart';
 
