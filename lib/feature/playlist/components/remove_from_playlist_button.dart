@@ -13,7 +13,7 @@ class RemoveFromPlaylistButton extends StatefulWidget {
 }
 
 class _RemoveFromPlaylistButtonState extends State<RemoveFromPlaylistButton> {
-  bool _isAdded = true; // 기본적으로 항목이 추가된 상태
+  bool _isAdded = true;
 
   void _togglePlay() {
     setState(() {
@@ -52,13 +52,13 @@ class _RemoveFromPlaylistButtonState extends State<RemoveFromPlaylistButton> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  _isAdded
-                      ? CupertinoIcons.trash
-                      : CupertinoIcons.music_note_list,
-                  color: Colors.white,
-                  size: 25,
-                ),
+                // Icon(
+                //   _isAdded
+                //       ? CupertinoIcons.trash
+                //       : CupertinoIcons.music_note_list,
+                //   color: Colors.white,
+                //   size: 25,
+                // ),
                 SizedBox(
                   width: 5,
                 ),
