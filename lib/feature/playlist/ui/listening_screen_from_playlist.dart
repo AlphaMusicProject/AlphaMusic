@@ -3,8 +3,8 @@ import 'package:alphamusic/feature/playlist/components/result_texts.dart';
 import 'package:alphamusic/shared/components/play_button.dart';
 import 'package:flutter/material.dart';
 
-class ListeningScreenFromPlaylist extends StatelessWidget {
-  const ListeningScreenFromPlaylist({super.key});
+class ListeningFromPlaylistScreen extends StatelessWidget {
+  const ListeningFromPlaylistScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
