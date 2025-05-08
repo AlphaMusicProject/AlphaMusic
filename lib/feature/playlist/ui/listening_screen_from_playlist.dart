@@ -1,11 +1,10 @@
-import 'package:alphamusic/feature/music_result/components/add_to_playlist_button.dart';
+import 'package:alphamusic/feature/playlist//components/remove_from_playlist_button.dart';
 import 'package:alphamusic/shared/components/result_texts.dart';
-import 'package:alphamusic/shared/components/cancel_button.dart';
 import 'package:alphamusic/shared/components/play_button.dart';
 import 'package:flutter/material.dart';
 
-class MusicResultScreen extends StatelessWidget {
-  const MusicResultScreen({super.key});
+class ListeningFromPlaylistScreen extends StatelessWidget {
+  const ListeningFromPlaylistScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,17 +18,6 @@ class MusicResultScreen extends StatelessWidget {
                 fit: BoxFit.fitWidth,
                 width: double.infinity,
                 height: 547,
-              ),
-              Positioned(
-                top: 10,
-                right: 30,
-                child: SafeArea(
-                  child: CancelButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ),
               ),
               Positioned(
                 bottom: 0,
@@ -63,10 +51,10 @@ class MusicResultScreen extends StatelessWidget {
                 Spacer(),
                 PlayButton(
                   onPlay: () {
-                    print("재생중");
+                    print("Playing");
                   },
                   onStop: () {
-                    print("재생중지");
+                    print("Stopped");
                   },
                 ),
               ],
@@ -74,7 +62,7 @@ class MusicResultScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 40),
-            child: AddToPlaylistButton(
+            child: RemoveFromPlaylistButton(
               onAdd: () {},
               onRemove: () {},
             ),

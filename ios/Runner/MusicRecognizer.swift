@@ -2,6 +2,7 @@ import Foundation
 import ShazamKit
 import AVFoundation
 
+@available(iOS 15.0, *)
 @objc class MusicRecognizer: NSObject, SHSessionDelegate {
     private let session = SHSession()
     private var resultCallback: ((String) -> Void)?
