@@ -3,7 +3,7 @@ import 'package:alphamusic/feature/playlist/components/result_texts.dart';
 import 'package:alphamusic/shared/components/play_button.dart';
 import 'package:flutter/material.dart';
 
-class ListeningScreenFromPlaylist extends StatelessWidget {  // 화면 이름 변경
+class ListeningScreenFromPlaylist extends StatelessWidget {
   const ListeningScreenFromPlaylist({super.key});
 
   @override
@@ -51,10 +51,10 @@ class ListeningScreenFromPlaylist extends StatelessWidget {  // 화면 이름 �
                 Spacer(),
                 PlayButton(
                   onPlay: () {
-                    print("재생중");
+                    print("Playing");
                   },
                   onStop: () {
-                    print("재생중지");
+                    print("Stopped");
                   },
                 ),
               ],
