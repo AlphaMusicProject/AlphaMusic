@@ -19,7 +19,9 @@ class FailScreen extends StatelessWidget {
                   height: 27,
                 ),
               ),
-              CancelButton(),
+              CancelButton(onPressed: () {
+                Navigator.of(context).pop();
+              }),
               SizedBox(width: 20),
             ],
           ),

@@ -2,22 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CancelButton extends StatelessWidget {
-  const CancelButton({super.key});
+  final VoidCallback onPressed;
+
+  const CancelButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 83, // 크기 유지
-      height: 27, // 크기 유지
+      width: 83,
+      height: 27,
       child: ElevatedButton(
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(35),
           ),
-          backgroundColor: Color.fromARGB(128, 217, 217, 217),
+          backgroundColor: Color.fromRGBO(217, 217, 217, 0.5),
           padding: EdgeInsets.zero,
         ),
         child: Row(
