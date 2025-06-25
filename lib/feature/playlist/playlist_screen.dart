@@ -1,3 +1,4 @@
+import 'package:alphamusic/feature/listening/ui/listening_screen.dart';
 import 'package:alphamusic/feature/playlist/components/music_list_item.dart';
 import 'package:alphamusic/feature/playlist/components/playlist_button.dart';
 import 'package:alphamusic/feature/playlist/components/playlist_list_item.dart';
@@ -100,8 +101,18 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                           child: Column(
                         children: [
                           CupertinoButton(
-                              child: Image.asset("assets/img/home_emoji.png", width: 244, height: 244,),
-                              onPressed: () {}),
+                              child: Image.asset(
+                                "assets/img/home_emoji.png",
+                                width: 244,
+                                height: 244,
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => ListeningScreen(),
+                                  ),
+                                );
+                              }),
                           Text(
                             "Tab to Alpha",
                             style: TextStyle(
@@ -209,38 +220,28 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                         ),
                       ),
                       Expanded(
-                          child: ListView.builder(
-                        controller: scrollController,
-                        padding: EdgeInsets.symmetric(horizontal: 32),
-                        itemCount: (30 / 2).ceil(), // 2개씩 묶기
-                        itemBuilder: (context, index) {
-                          int first = index * 2;
-                          int second = first + 1;
-
-                          return Padding(
-                            padding: EdgeInsets.symmetric(vertical: 8),
-                            child: playListButton == false
-                                ? Row(
-                                    children: [
-                                      Expanded(child: MusicListItem()),
-                                      SizedBox(width: 12),
-                                      if (second < 30)
-                                        Expanded(child: MusicListItem())
-                                      else
+                        child: ListView(
+                          controller: scrollController,
+                          padding: EdgeInsets.symmetric(horizontal: 32),
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.symmetric(vertical: 8),
+                              child: playListButton == false
+                                  ? Row(
+                                      children: [
+                                        Expanded(child: MusicListItem()),
+                                        SizedBox(width: 12),
                                         Expanded(child: SizedBox()),
-                                    ],
-                                  )
-                                : Column(
-                                    children: [
-                                      SizedBox(
-                                          height: 86,
-                                          child: PlaylistListItem()),
-                                      SizedBox(width: 12),
-                                    ],
-                                  ),
-                          );
-                        },
-                      )),
+                                      ],
+                                    )
+                                  : SizedBox(
+                                      height: 86,
+                                      child: PlaylistListItem(),
+                                    ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
