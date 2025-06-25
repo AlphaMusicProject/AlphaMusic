@@ -1,5 +1,6 @@
 import 'package:alphamusic/feature/fail/ui/fail_screen.dart';
 import 'package:alphamusic/feature/home/home_screen.dart';
+import 'package:alphamusic/feature/listening/ui/listening_screen.dart';
 import 'package:alphamusic/shared/controller/music_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,7 +12,7 @@ void main() async {
       theme: ThemeData(
         scaffoldBackgroundColor: Color.fromARGB(255, 3, 4, 9),
       ),
-      home: HomeScreen(),
+      home: ListeningScreen(),
     ),
   );
 }
