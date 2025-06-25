@@ -19,6 +19,7 @@ class ListeningTexts extends StatelessWidget {
                 fontSize: 15,
                 fontFamily: "Pretendard",
                 fontWeight: FontWeight.normal,
+                decoration: TextDecoration.none,
               ),
             ),
             Text(
@@ -28,6 +29,7 @@ class ListeningTexts extends StatelessWidget {
                 fontSize: 30,
                 fontFamily: "Pretendard",
                 fontWeight: FontWeight.bold,
+                decoration: TextDecoration.none,
               ),
             ),
           ],
