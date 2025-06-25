@@ -3,10 +3,9 @@ import 'package:alphamusic/feature/playlist/components/playlist_button.dart';
 import 'package:alphamusic/feature/playlist/components/playlist_list_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class PlaylistScreen extends StatefulWidget {
-
-
   @override
   State<PlaylistScreen> createState() => _PlaylistScreenState();
 }
@@ -32,8 +31,6 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
     }
   }
 
-
-
   void changePlaylist() {
     setState(() {
       playListButton = true;
@@ -42,21 +39,80 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-
-
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
           Positioned.fill(
-            child: Center(
-              child: Text(
-                "본문 콘텐츠",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
+              child: Padding(
+                  padding: EdgeInsets.all(34),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(
+                            "assets/img/profile_emoji.png",
+                            width: 103,
+                            height: 103,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "GoodMorning!",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Color(
+                                      0xffA2A2A3,
+                                    )),
+                              ),
+                              Text(
+                                "I AM ALPHA",
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      Text(
+                        "Music Discovery, Own Playlist & Song Info",
+                        style: TextStyle(fontSize: 15, color: Colors.white),
+                      ),
+                      Text(
+                        "What song are you",
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "looking for?",
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Center(
+                          child: Column(
+                        children: [
+                          CupertinoButton(
+                              child: Image.asset("assets/img/home_emoji.png", width: 244, height: 244,),
+                              onPressed: () {}),
+                          Text(
+                            "Tab to Alpha",
+                            style: TextStyle(
+                                color: Color(0xff67676B),
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
+                      )),
+                    ],
+                  ))),
           DraggableScrollableSheet(
             controller: _sheetController,
             initialChildSize: 0.27,
@@ -133,7 +189,9 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                                         ),
                                   SizedBox(height: 20),
                                   playListButton == false
-                                      ? PlaylistButton(playlistChange: changePlaylist,)
+                                      ? PlaylistButton(
+                                          playlistChange: changePlaylist,
+                                        )
                                       : Container(),
                                   SizedBox(height: 20),
                                   playListButton == false
